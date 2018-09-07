@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener {
         $fallbackSkin = new Skin('fallback', self::getSkinDataFromPNG($this->getDataFolder().'fallback.png'));
 
         if(!$fallbackSkin->isValid()){
-            $this->getLogger()->error('Invalid skin supplied as fallback. Reverting to default one.');
+            $this->getLogger()->error('invalid skin supplied as fallback reverting to default one');
             $fallbackSkin = new Skin('fallback', self::getSkinDataFromPNG($this->getFile().'/resources/fallback.png'));
         }
 
